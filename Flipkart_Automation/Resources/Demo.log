@@ -1,0 +1,2 @@
+2016-07-15 12:06:46-Forwarding quit on session 0b930d4585154af574889b0c35555adc to remote--INFO -org.apache.http.impl.execchain.RetryExec:I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {}->http://localhost:32263: The target server failed to respond
+2016-07-15 12:06:46-Forwarding quit on session 0b930d4585154af574889b0c35555adc to remote--INFO -org.apache.http.impl.execchain.RetryExec:Retrying request to {}->http://localhost:32263

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test-method Suite" parallel="tests" thread-count="2" >
+  <parameter name="parallel" value="YES"> </parameter>
+
+	<test name="P1" group-by-instances="true">
+		<parameter name="browser" value="firefox"></parameter>
+		<parameter name="ip" value="http://localhost:5566/wd/hub"></parameter>
+		<classes>
+			<class name="com.wk.dmse.scripts.Order_Creation" /> 
+		</classes>
+	</test>
+
+
+  <test name="P2" group-by-instances="true">
+ 	 <parameter name="browser" value="firefox"></parameter>
+ 	 <parameter name="ip" value="http://localhost:5566/wd/hub"></parameter>
+    <classes>
+    <class name="com.wk.delaware.scripts.SRIOrderCreation" /> 
+    </classes>
+  </test>
+  
+  
+</suite>

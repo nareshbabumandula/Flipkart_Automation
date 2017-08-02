@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Test-method Suite]">
+  <test name="Demo_Automation Script(failed)">
+    <classes>
+      <class name="com.application.scripts.TC03">
+        <methods>
+          <include name="suiteFirst"/>
+          <include name="reportHeader"/>
+          <include name="tearDownFirefox"/>
+          <include name="first1"/>
+          <include name="firstBeforeClass"/>
+          <include name="tearDown"/>
+          <include name="first"/>
+          <include name="close"/>
+        </methods>
+      </class> <!-- com.application.scripts.TC03 -->
+      <class name="com.application.scripts.TC01">
+        <methods>
+          <include name="testTC01"/>
+          <include name="reportHeader"/>
+          <include name="firstBeforeClass"/>
+          <include name="tearDown"/>
+          <include name="close"/>
+        </methods>
+      </class> <!-- com.application.scripts.TC01 -->
+      <class name="com.application.scripts.TC02">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="firstBeforeClass"/>
+          <include name="tearDown"/>
+          <include name="close"/>
+        </methods>
+      </class> <!-- com.application.scripts.TC02 -->
+    </classes>
+  </test> <!-- Demo_Automation Script(failed) -->
+</suite> <!-- Failed suite [Test-method Suite] -->
