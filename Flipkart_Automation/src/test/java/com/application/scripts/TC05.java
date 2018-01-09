@@ -1,9 +1,9 @@
 package com.application.scripts;
 
-public class TC04 {
+public class TC05 {
 
 	public static void main(String[] args) {
-		System.out.println("Executing TC04");
+		System.out.println("Executing TC05");
 
 	}
 
