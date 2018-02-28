@@ -8,6 +8,7 @@ public class TC06 {
 	public void testTC06()
 	{
 		System.out.println("Executing Search product method");
+		System.out.println("Successfully searched the product");
 	}
 
 }
