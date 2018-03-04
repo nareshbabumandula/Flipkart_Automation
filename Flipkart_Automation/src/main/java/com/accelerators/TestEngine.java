@@ -156,8 +156,8 @@ public class TestEngine extends SendMail {
 
 		WriteExcelfile();
 	//	File destFile= new File("Results/SummaryFiles");
-		File source = new File("Results/HTML"+suiteStartTime+"/SummaryResults_IE.xls");
-	    File dest = new File("Results/SummaryFiles/"+suiteStartTime+"-"+orderNumber+"_SummaryResults_IE.xls");
+		File source = new File("Results/HTML"+suiteStartTime+"/SummaryResults_" + browsertype + ".xls");
+	    File dest = new File("Results/SummaryFiles/"+suiteStartTime+"-"+orderNumber+"_SummaryResults_" +browsertype+ ".xls");
 	    /*if (!destFile.exists()) {
 	    	destFile.mkdir();
 		}*/
@@ -569,7 +569,7 @@ public void WriteExcelfile() throws IOException {
 	    		}
 	    		
 	    		try {
-	    			FileOutputStream out = new FileOutputStream(new File("Results/HTML"+suiteStartTime+"/SummaryResults_IE.xls"));
+	    			FileOutputStream out = new FileOutputStream(new File("Results/HTML"+suiteStartTime+"/SummaryResults_" +browsertype+ ".xls"));
 	    				
 	    			workbook.write(out);
 	    			out.close();
