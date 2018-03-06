@@ -23,7 +23,7 @@ public class VerifySearch extends CommonPage{
 			type(txtSearch, txtSearchTerm, "Search textbox");
 			click(btnSearch, "Search button");
 			String strHeading = driver.findElement(sp.ResultsHeading).getText(); //Search results page heading
-			if (strHeading.contains("shoe")) {
+			if (strHeading.contains(txtSearchTerm)) {
 				SuccessReport("Search Product", "Appropriate heading is displayed for the search criteria : " + txtSearchTerm);
 			} else {
 				failureReport("Search Product", "Appropriate heading is not displayed for the search criteria : " + txtSearchTerm);
