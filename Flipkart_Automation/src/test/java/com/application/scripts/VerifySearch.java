@@ -13,7 +13,7 @@ public class VerifySearch extends CommonPage{
 	Xls_Reader reader = new Xls_Reader("TestData/Data.xlsx");
 	SearchResPage sp = new SearchResPage();
 
-
+	//Description: Verifies the search functionality based on search criteria	
 	@Test
 	public void verifySearchFunctionality() throws Throwable
 	{
