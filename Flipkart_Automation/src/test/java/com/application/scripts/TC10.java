@@ -7,7 +7,7 @@ import com.objectRepository.SearchResPage;
 import com.utilities.Xls_Reader;
 
 
-public class VerifySearch extends CommonPage{
+public class TC10 extends CommonPage{
 
 	//Create object for excel
 	Xls_Reader reader = new Xls_Reader("TestData/Data.xlsx");
@@ -18,7 +18,7 @@ public class VerifySearch extends CommonPage{
 	public void verifySearchFunctionality() throws Throwable
 	{
 		boolean bflag = false;
-		String txtSearchTerm = reader.getCellData("Search", "Search_Criteria", 2); //Search term value
+		String txtSearchTerm = reader.getCellData("Sheet2", "SearchTerm", 2); //Search term value
 		try {
 			type(txtSearch, txtSearchTerm, "Search textbox");
 			click(btnSearch, "Search button");

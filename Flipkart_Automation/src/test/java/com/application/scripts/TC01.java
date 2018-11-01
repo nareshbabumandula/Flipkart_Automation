@@ -1,7 +1,6 @@
 package com.application.scripts;
 
 import org.testng.annotations.Test;
-
 import com.objectRepository.CommonPage;
 import com.objectRepository.SearchResPage;
 import com.utilities.Xls_Reader;
@@ -19,6 +18,7 @@ public class TC01 extends CommonPage
 		
 		String txtSearchTerm = reader.getCellData("Sheet1", "SearchTerm", 2);
 		String txtCategory = reader.getCellData("Sheet1", "Category", 2);
+	
 		//Enter text in Search text box
 		type(txtSearch, txtSearchTerm, "Search Textbox");
 		//Click on Search button
@@ -45,7 +45,7 @@ public class TC01 extends CommonPage
 		Thread.sleep(4000);
 		//Click on Product
 		click(sp.imgProduct, "Product");
-			
+	
 	}
 
 }
