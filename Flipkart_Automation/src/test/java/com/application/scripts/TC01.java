@@ -20,7 +20,7 @@ public class TC01 extends CommonPage
 		String txtCategory = reader.getCellData("Sheet1", "Category", 2);
 	
 		//Enter text in Search text box
-		type(txtSearch, txtSearchTerm, "Search Textbox");
+		type(txtSearch, txtSearchTerm, "Product Search Textbox");
 		//Click on Search button
 		click(btnSearch, "Search button");
 		//Get the page title
