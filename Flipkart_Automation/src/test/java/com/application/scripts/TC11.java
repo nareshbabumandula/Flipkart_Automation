@@ -30,15 +30,16 @@ public class TC11 extends CommonPage{
 			waitForElementPresent(sp.strHeading, "Search Results Heading");
 
 			String strResultsPageTitle = driver.getTitle(); // Retrieve page title
+			// Verify page title
 			if (strResultsPageTitle.contains(strProduct)) {
 				SuccessReport("Verify Search Results Page Title", "Appropriate page title - " + strResultsPageTitle + " is displayed for the searched product '" + strProduct + "'");
 			} else {
-				failureReport("Verify Search Results Page Title", "Appropriate page title - " + strResultsPageTitle + " is not displayed for the searched product '" + strProduct + "'");
+				failureReport("Verify Search Results Page Title", "Appropriate page title - " + strResultsPageTitle + " is not displayed for the product searched '" + strProduct + "'");
 			}
 			
 			click(sp.imgProduct, "Product Image"); //Click on product image
 			switchToNewWindow();
-			click(sc.btnAddToCart, "ADD TO CART");
+			click(sc.btnAddToCart, "ADD TO CART"); //Click on ADDTOCART button
 			} catch (Throwable e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
