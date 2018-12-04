@@ -7,7 +7,7 @@ public class TC12 {
 	@Test
 	public void verifyProductDetails()
 	{
-		System.out.println("Successfully verified the product price details and stock avalability");
+		System.out.println("Successfully verified the stock availability and product price details");
 	}
 
 }
