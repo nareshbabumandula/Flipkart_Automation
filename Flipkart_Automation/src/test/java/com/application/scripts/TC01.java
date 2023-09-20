@@ -2,6 +2,7 @@ package com.application.scripts;
 
 import org.testng.annotations.Test;
 import com.objectRepository.CommonPage;
+import com.objectRepository.Homepage;
 import com.objectRepository.SearchResPage;
 import com.utilities.Xls_Reader;
 
@@ -10,13 +11,16 @@ public class TC01 extends CommonPage
 	//Create object for excel sheet
 	Xls_Reader reader = new Xls_Reader("TestData/Data.xlsx");
 	
+	//Create object for excel sheet
 	SearchResPage sp = new SearchResPage();
+	Homepage hp = new Homepage();
+	
 	
 	@Test
 	public void testTC01() throws Throwable
 	{
 		String txtSearchTerm = reader.getCellData("Sheet1", "SearchTerm", 2);
-		String txtCategory = reader.getCellData("Sheet1", "SearchTerm", 2);
+		String txtCategory = reader.getCellData("Sheet1", "Category", 2);
 		waitForVisibilityOfElement(txtSearch, "Search Textbox"); //Wait for Search textbox
 		
 		//Enter text in Search text box
@@ -39,16 +43,14 @@ public class TC01 extends CommonPage
 		String strSearchPageHeading = getText(sp.ResultsHeading, "Search Results Page Heading");
 		
 		if (strSearchPageHeading.toLowerCase().contains(txtCategory.toLowerCase())) {
-			SuccessReport("Verify Page Heading", "Search term '" +txtSearchTerm+"' is found in search results heading");
+			SuccessReport("Verify Page Heading", "Search term '" +txtCategory+"' is found in search results heading");
 		} else 
 		{
-			failureReport("Verify Page Heading", "Search term  '" +txtSearchTerm+ "' is not found in search results heading");
+			failureReport("Verify Page Heading", "Search term  '" +txtCategory+ "' is not found in search results heading");
 		}
 		
 		Thread.sleep(4000);
 		//Click on Product
 		click(sp.imgProduct, "Product");
 	}
-
-	
 }
