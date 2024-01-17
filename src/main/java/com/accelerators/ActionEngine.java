@@ -88,9 +88,7 @@ public class ActionEngine extends TestEngine {
 				//return true;
 			} else if(!flag) {
 				failureReport("Click on "+locatorName, "Unable to click on: \""+ locatorName+"\"");
-
 			}
-			
 		}
 		return flag;
 	}
@@ -1536,7 +1534,7 @@ public class ActionEngine extends TestEngine {
 			throws Throwable {
 		cmdStartTime=System.currentTimeMillis();
 		String text = "";
-		//boolean flag = false;
+		boolean flag = false;
 		try {
 			if (isElementPresent(locator, locatorName)) {
 				text = driver.findElement(locator).getText();
@@ -1545,11 +1543,11 @@ public class ActionEngine extends TestEngine {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			/*if (flag) {
+			if (flag) {
 				SuccessReport("GetText ", " Able to get Text from \""+locatorName+"\"");			
 			} else {
 				warningReport("GetText ", " Unable to get Text from \""+locatorName+"\"");
-			}*/
+			}
 		}
 		return text;
 	}

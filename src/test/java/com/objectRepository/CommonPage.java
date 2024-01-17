@@ -5,7 +5,7 @@ import com.accelerators.ActionEngine;
 
 public class CommonPage extends ActionEngine{
 
-	public static By txtSearch = By.name("q");
+	public static By txtSearch = By.name("q123");
 	public static By btnSearch = By.xpath("//button[@type='submit']");
 	public static By btnCART = By.className("DJrnBo");
 	public static By Cart = By.xpath("//span[contains(text(),'Cart')]");
@@ -14,7 +14,7 @@ public class CommonPage extends ActionEngine{
 	
 
 	public void SearchProduct(String PRODUCTNAME) {
-		//Code
+		
 	}
 	
 		
