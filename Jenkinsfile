@@ -2,12 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                checkout scm
-            }
-        }
-
+       
         stage('Clean') {
             steps {
                 script {
@@ -16,25 +11,7 @@ pipeline {
                 }
             }
         }
-
-        stage('Validate') {
-            steps {
-                script {
-                    // Run validate phase
-                    bat 'mvn validate'
-                }
-            }
-        }
-
-        stage('Compile') {
-            steps {
-                script {
-                    // Run compile phase
-                    bat 'mvn compile'
-                }
-            }
-        }
-
+        
         stage('Test') {
             steps {
                 script {
