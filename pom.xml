@@ -92,11 +92,11 @@
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/com.sikulix/sikulixapi -->
-		<dependency>
+		<!--dependency>
 			<groupId>com.sikulix</groupId>
 			<artifactId>sikulixapi</artifactId>
 			<version>1.1.0</version>
-		</dependency>
+		</dependency-->
 		
 		<dependency>
     		<groupId>org.sikuli</groupId>
